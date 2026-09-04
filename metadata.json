@@ -1,0 +1,6 @@
+{
+  "name": "Plataforma de Estudio Sol Mariana - CECyT 11 IPN",
+  "description": "Plataforma interactiva de estudio para 3er semestre de Técnico en Construcción en el CECyT 11 Wilfrido Massieu (IPN), con guías completas por materia, biblioteca de libros y Google Drive, tarjetas didácticas interactivas tipo Gemini Notebook, listas de reproducción de videos y simuladores de exámenes departamentales de 100 reactivos con retroalimentación y desarrollo de ejercicios.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
