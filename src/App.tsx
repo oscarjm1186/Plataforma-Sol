@@ -23,7 +23,7 @@ import { Subject, StudyModule, BookReference, Flashcard, VideoLesson, ExamAttemp
 import { SUBJECTS } from './data/subjectsData';
 import { ALL_GUIDES_DATA } from './data/guidesData';
 import { BOOKS_DATA } from './data/booksData';
-import { FLASHCARDS_DATA } from './data/flashcardsData';
+import { FLASHCARDS_DATA, FLASHCARDS_BY_SUBJECT } from './data/flashcardsData';
 import { DEFAULT_VIDEOS_DATA } from './data/videosData';
 import { 
   getCompletedTopics, 
@@ -186,7 +186,7 @@ export const App: React.FC = () => {
   // Prepare current subject data
   const currentModules = selectedSubject ? (ALL_GUIDES_DATA[selectedSubject.id] || []) : [];
   const currentBooks = selectedSubject ? (BOOKS_DATA[selectedSubject.id] || []) : [];
-  const currentFlashcards = selectedSubject ? FLASHCARDS_DATA.filter(f => f.subjectId === selectedSubject.id) : [];
+  const currentFlashcards = selectedSubject ? (FLASHCARDS_BY_SUBJECT[selectedSubject.id] || FLASHCARDS_DATA.filter(f => f.subjectId === selectedSubject.id)) : [];
   const currentVideos = selectedSubject ? [
     ...DEFAULT_VIDEOS_DATA.filter(v => v.subjectId === selectedSubject.id),
     ...customVideos.filter(v => v.subjectId === selectedSubject.id)
@@ -261,252 +261,148 @@ export const App: React.FC = () => {
         ) : (
           /* HOME DASHBOARD - SPACE LAB BENTO GRID LAYOUT */
           <div className="space-y-8">
-            {/* Bento Grid Header & Metric Showcase */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
-              {/* Bento Card 1: Large Welcome & Space Mission Card (Span 2 col) */}
-              <div className="md:col-span-2 bg-[#060a18]/85 border border-cyan-950/80 rounded-3xl p-6 md:p-8 relative overflow-hidden group flex flex-col justify-between shadow-2xl shadow-black/80 backdrop-blur-xl">
-                {/* Cosmic stardust ambient element */}
-                <div className="absolute top-0 right-0 p-4 opacity-5 text-8xl font-black italic select-none pointer-events-none text-cyan-400 font-space">
-                  CECYT 11
-                </div>
-                <div className="absolute -right-12 -bottom-12 w-48 h-48 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none" />
-                <div className="absolute -left-12 -top-12 w-48 h-48 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
+            {/* Minimalist, Clean & Intuitive Home Header */}
+            <div className="bg-[#060a18]/85 border border-cyan-950/80 rounded-3xl p-6 md:p-8 relative overflow-hidden shadow-2xl shadow-black/80 backdrop-blur-xl">
+              <div className="absolute top-0 right-0 p-4 opacity-5 text-7xl font-black italic select-none pointer-events-none text-cyan-400 font-space">
+                CECYT 11
+              </div>
+              <div className="absolute -right-12 -bottom-12 w-48 h-48 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none" />
+              <div className="absolute -left-12 -top-12 w-48 h-48 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
 
-                <div className="relative z-10 space-y-4">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <div className="inline-flex items-center gap-2 bg-cyan-950/60 text-cyan-300 border border-cyan-500/30 px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider shadow-inner">
-                      <Satellite className="w-3.5 h-3.5 text-cyan-400" />
-                      <span>Space Lab • IPN Técnico en Construcción</span>
-                    </div>
-
-                    {/* Quick Button: "No soy Sol" / Cambiar Estudiante */}
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setIsEditingNameInline(prev => !prev);
-                        setInlineNameInput(studentName);
-                      }}
-                      className="inline-flex items-center gap-1.5 text-xs font-mono font-bold px-3 py-1 rounded-full bg-cyan-950/80 hover:bg-cyan-900 text-cyan-300 hover:text-cyan-200 border border-cyan-500/40 hover:border-cyan-400 transition cursor-pointer shadow-xs"
-                      title="Haz clic para escribir tu nombre si eres un compañero de Sol"
-                    >
-                      <User className="w-3.5 h-3.5 text-cyan-400" />
-                      <span>{isSol ? 'No soy Sol' : `Estudiante: ${studentName}`}</span>
-                      <Edit3 className="w-3 h-3 text-cyan-400/80" />
-                    </button>
+              <div className="relative z-10 space-y-4">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div className="inline-flex items-center gap-2 bg-cyan-950/60 text-cyan-300 border border-cyan-500/30 px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider">
+                    <Satellite className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>IPN • CECyT 11 "Wilfrido Massieu" • Técnico en Construcción</span>
                   </div>
 
-                  <h1 className="text-3xl md:text-4xl font-heading font-extrabold tracking-tight text-white leading-tight">
-                    ¡Hola, {studentName}! ☀️🌌
-                  </h1>
-
-                  {/* Cuadro de texto interactivo para personalizar nombre */}
-                  {isEditingNameInline && (
-                    <div className="bg-[#030614] border border-cyan-500/40 rounded-2xl p-4 shadow-xl space-y-3 animate-fadeIn">
-                      <div className="flex items-center justify-between flex-wrap gap-2">
-                        <span className="text-xs font-mono font-bold text-cyan-300 flex items-center gap-1.5">
-                          <User className="w-3.5 h-3.5 text-cyan-400" />
-                          ¿No eres Sol? Escribe tu nombre para personalizar tu plataforma:
-                        </span>
-                        {!isSol && (
-                          <button
-                            type="button"
-                            onClick={() => handleUpdateStudentName(DEFAULT_STUDENT_NAME)}
-                            className="text-[11px] font-mono text-amber-300 hover:underline flex items-center gap-1 cursor-pointer"
-                          >
-                            <RotateCcw className="w-3 h-3" />
-                            Restablecer a Sol Mariana
-                          </button>
-                        )}
-                      </div>
-
-                      <form
-                        onSubmit={(e) => {
-                          e.preventDefault();
-                          if (inlineNameInput.trim()) {
-                            handleUpdateStudentName(inlineNameInput.trim());
-                          }
-                        }}
-                        className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2"
-                      >
-                        <input
-                          type="text"
-                          value={inlineNameInput}
-                          onChange={(e) => setInlineNameInput(e.target.value)}
-                          placeholder="Escribe tu nombre y apellido (ej. Carlos Méndez)..."
-                          className="flex-1 bg-[#070c22] border border-cyan-900/80 focus:border-cyan-400 text-white px-3.5 py-2 rounded-xl text-xs font-medium focus:outline-none focus:ring-1 focus:ring-cyan-400"
-                          autoFocus
-                          required
-                        />
-                        <div className="flex items-center gap-2">
-                          <button
-                            type="button"
-                            onClick={() => setIsEditingNameInline(false)}
-                            className="px-3 py-2 rounded-xl text-xs font-mono text-slate-400 hover:text-white bg-slate-800/60 hover:bg-slate-800 cursor-pointer"
-                          >
-                            Cancelar
-                          </button>
-                          <button
-                            type="submit"
-                            disabled={!inlineNameInput.trim()}
-                            className="px-4 py-2 rounded-xl text-xs font-mono font-bold text-slate-950 bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 disabled:opacity-50 cursor-pointer shadow-md shadow-cyan-500/20"
-                          >
-                            Actualizar
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  )}
-
-                  <p className="text-xs md:text-sm text-[#a6b9cc] leading-relaxed max-w-xl">
-                    Tu base de operaciones y laboratorio de estudio para el <strong>Tercer Semestre</strong>. Explora las {SUBJECTS.length} materias curriculares, guías de estudio interactivas por parcial, libros oficiales sincronizados con Google Drive, tarjetas de estudio para repaso y exámenes departamentales de 100 reactivos.
-                  </p>
-                </div>
-
-                <div className="relative z-10 mt-6 pt-4 border-t border-cyan-950/80 flex flex-wrap items-center justify-between gap-3">
-                  <div className="flex items-center gap-3 text-xs text-[#a6b9cc]">
-                    <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse shadow-sm shadow-cyan-400/80" />
-                    <span className="font-mono text-cyan-300">{SUBJECTS.length * 3} Unidades Temáticas (3 Parciales)</span>
-                  </div>
+                  {/* Quick Button: Cambiar Estudiante */}
                   <button
-                    onClick={handleScrollToSubjects}
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-400 via-orange-500 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 text-xs font-black px-4 py-2.5 rounded-xl transition-all shadow-lg shadow-amber-500/30 cursor-pointer"
+                    type="button"
+                    onClick={() => {
+                      setIsEditingNameInline(prev => !prev);
+                      setInlineNameInput(studentName);
+                    }}
+                    className="inline-flex items-center gap-1.5 text-xs font-mono font-bold px-3 py-1 rounded-full bg-cyan-950/80 hover:bg-cyan-900 text-cyan-300 hover:text-cyan-200 border border-cyan-500/40 hover:border-cyan-400 transition cursor-pointer"
+                    title="Haz clic para personalizar tu nombre"
                   >
-                    <Telescope className="w-3.5 h-3.5" />
-                    <span>Comenzar Estudio (11 Materias)</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <User className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>{isSol ? 'No soy Sol' : `Estudiante: ${studentName}`}</span>
+                    <Edit3 className="w-3 h-3 text-cyan-400/80" />
                   </button>
                 </div>
-              </div>
 
-              {/* Bento Card 2: Academic Progress Bento */}
-              <div className="bg-[#060a18]/85 border border-cyan-950/80 rounded-3xl p-6 flex flex-col justify-between text-center relative overflow-hidden group shadow-xl shadow-black/80 backdrop-blur-xl">
-                <div className="flex items-center justify-between w-full mb-2">
-                  <span className="text-[10px] font-bold font-mono uppercase tracking-widest text-cyan-400 flex items-center gap-1">
-                    <Orbit className="w-3 h-3 animate-spin" style={{ animationDuration: '24s' }} />
-                    Progreso Académico
-                  </span>
-                  <div className="w-8 h-8 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center font-bold border border-cyan-500/20">
-                    <CheckCircle2 className="w-4 h-4" />
-                  </div>
-                </div>
-
-                <div className="my-auto py-2">
-                  <div className="text-4xl md:text-5xl font-black font-space text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-200 to-amber-300 tracking-tight">
-                    {totalTopicsAcrossAllSubjects > 0 
-                      ? Math.round((completedTopics.length / totalTopicsAcrossAllSubjects) * 100) 
-                      : 0}%
-                  </div>
-                  <div className="text-xs text-[#a6b9cc] mt-1 font-mono">
-                    {completedTopics.length} de {totalTopicsAcrossAllSubjects} temas completados
-                  </div>
-                </div>
-
-                <div className="w-full bg-[#030612] h-2.5 rounded-full overflow-hidden border border-cyan-950 mt-3 p-0.5">
-                  <div 
-                    className="bg-gradient-to-r from-cyan-500 via-indigo-500 to-amber-400 h-full rounded-full transition-all duration-700 shadow-sm shadow-cyan-400" 
-                    style={{ 
-                      width: `${totalTopicsAcrossAllSubjects > 0 ? (completedTopics.length / totalTopicsAcrossAllSubjects) * 100 : 0}%` 
-                    }}
-                  />
-                </div>
-              </div>
-
-              {/* Bento Card 3: Exam Center Bento */}
-              <div className="bg-[#060a18]/85 border border-cyan-950/80 rounded-3xl p-6 flex flex-col justify-between text-center relative overflow-hidden group shadow-xl shadow-black/80 backdrop-blur-xl">
-                <div className="flex items-center justify-between w-full mb-2">
-                  <span className="text-[10px] font-bold font-mono uppercase tracking-widest text-amber-400 flex items-center gap-1">
-                    <Compass className="w-3 h-3" />
-                    Exámenes Departamentales
-                  </span>
-                  <div className="w-8 h-8 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center font-bold border border-amber-500/20">
-                    <GraduationCap className="w-4 h-4" />
-                  </div>
-                </div>
-
-                <div className="my-auto py-2">
-                  <div className="text-4xl md:text-5xl font-black font-space text-amber-400 tracking-tight">
-                    100
-                  </div>
-                  <div className="text-xs text-slate-300 font-semibold mt-1 font-mono">
-                    Reactivos por examen
-                  </div>
-                </div>
-
-                <div className="p-2.5 bg-[#030612]/90 rounded-xl border border-cyan-950 text-[11px] text-[#a6b9cc] flex items-center justify-around font-mono">
-                  <span>3 Parciales</span>
-                  <span className="text-cyan-900">•</span>
-                  <span className="text-cyan-300 font-semibold">{examAttempts.length} Resueltos</span>
-                </div>
-              </div>
-
-              {/* Bento Card 4: Drive Observatory Card (Span 2 col) */}
-              <div 
-                onClick={handleOpenLibrary}
-                className="md:col-span-2 bg-[#060a18]/85 border border-cyan-950/80 rounded-3xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xl shadow-black/80 backdrop-blur-xl hover:border-amber-500/50 transition cursor-pointer group"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-amber-500/15 text-amber-400 rounded-2xl flex items-center justify-center text-2xl shrink-0 border border-amber-500/30 shadow-md group-hover:scale-105 transition-transform">
-                    <BookOpen className="w-7 h-7" />
-                  </div>
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div>
-                    <div className="flex items-center gap-2">
-                      <h3 className="text-base font-bold text-white font-space group-hover:text-amber-300 transition-colors">Biblioteca Digital & Google Drive</h3>
-                      <span className="text-[10px] font-mono uppercase font-bold px-2.5 py-0.5 rounded-full bg-amber-950/50 text-amber-300 border border-amber-500/30">
-                        Nube Drive
-                      </span>
-                    </div>
-                    <p className="text-xs text-[#a6b9cc] mt-1 max-w-sm">
-                      Carpetas de Google Drive oficiales y listas de videos de YouTube para las 11 materias.
+                    <h1 className="text-2xl md:text-3xl font-heading font-extrabold tracking-tight text-white">
+                      ¡Hola, {studentName}! ☀️
+                    </h1>
+                    <p className="text-xs md:text-sm text-[#a6b9cc] mt-1 max-w-2xl leading-relaxed">
+                      Plataforma de estudio para el <strong>Tercer Semestre</strong>. Selecciona cualquier materia para acceder de inmediato a sus <strong>guías de estudio completas</strong>, <strong>libros y Google Drive oficial</strong>, <strong>50 tarjetas de repaso</strong> o su <strong>simulador de examen</strong>.
                     </p>
                   </div>
-                </div>
 
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleOpenLibrary();
-                  }}
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 text-xs font-bold rounded-xl transition cursor-pointer shrink-0 shadow-md shadow-amber-950/50 font-mono"
-                >
-                  <span>Ver Libros y PDFs</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-
-              {/* Bento Card 5: Flashcards (Span 2 col) */}
-              <div 
-                onClick={handleOpenFlashcards}
-                className="md:col-span-2 bg-[#060a18]/85 border border-cyan-950/80 rounded-3xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xl shadow-black/80 backdrop-blur-xl hover:border-cyan-500/50 transition cursor-pointer group"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-cyan-500/15 text-cyan-400 rounded-2xl flex items-center justify-center text-2xl shrink-0 border border-cyan-500/30 shadow-md group-hover:scale-105 transition-transform">
-                    <Layers className="w-7 h-7" />
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <h3 className="text-base font-bold text-white font-space group-hover:text-cyan-300 transition-colors">Tarjetas de Estudio y Repaso</h3>
-                      <span className="text-[10px] font-mono uppercase font-bold px-2.5 py-0.5 rounded-full bg-cyan-950/50 text-cyan-300 border border-cyan-500/30">
-                        Repaso Activo
+                  {/* Global Progress Pill */}
+                  <div className="bg-[#030614] border border-cyan-950 p-3.5 rounded-2xl shrink-0 min-w-[220px]">
+                    <div className="flex items-center justify-between text-xs font-mono mb-1.5">
+                      <span className="text-[#a6b9cc]">Avance global:</span>
+                      <span className="text-cyan-300 font-bold">
+                        {totalTopicsAcrossAllSubjects > 0 
+                          ? Math.round((completedTopics.length / totalTopicsAcrossAllSubjects) * 100) 
+                          : 0}%
                       </span>
                     </div>
-                    <p className="text-xs text-[#a6b9cc] mt-1 max-w-sm">
-                      Tarjetas didácticas con conceptos clave, fórmulas, síntesis y definiciones para cada materia.
-                    </p>
+                    <div className="w-full bg-[#070b22] h-2 rounded-full overflow-hidden border border-indigo-950">
+                      <div 
+                        className="bg-gradient-to-r from-cyan-500 via-indigo-500 to-amber-400 h-full rounded-full transition-all duration-500"
+                        style={{ 
+                          width: `${totalTopicsAcrossAllSubjects > 0 ? (completedTopics.length / totalTopicsAcrossAllSubjects) * 100 : 0}%` 
+                        }}
+                      />
+                    </div>
+                    <div className="text-[10px] text-slate-500 font-mono mt-1 text-right">
+                      {completedTopics.length} de {totalTopicsAcrossAllSubjects} temas dominados
+                    </div>
                   </div>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleOpenFlashcards();
-                  }}
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 text-xs font-bold rounded-xl transition cursor-pointer shrink-0 shadow-md shadow-cyan-950/50 font-mono"
-                >
-                  <span>Repasar ({masteredCards.length} dominadas)</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                {/* Inline Name Editor */}
+                {isEditingNameInline && (
+                  <div className="bg-[#030614] border border-cyan-500/40 rounded-2xl p-4 shadow-xl space-y-3">
+                    <div className="flex items-center justify-between flex-wrap gap-2">
+                      <span className="text-xs font-mono font-bold text-cyan-300 flex items-center gap-1.5">
+                        <User className="w-3.5 h-3.5 text-cyan-400" />
+                        Escribe tu nombre para personalizar la plataforma:
+                      </span>
+                      {!isSol && (
+                        <button
+                          type="button"
+                          onClick={() => handleUpdateStudentName(DEFAULT_STUDENT_NAME)}
+                          className="text-[11px] font-mono text-amber-300 hover:underline flex items-center gap-1 cursor-pointer"
+                        >
+                          <RotateCcw className="w-3 h-3" />
+                          Restablecer a Sol Mariana
+                        </button>
+                      )}
+                    </div>
+
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        if (inlineNameInput.trim()) {
+                          handleUpdateStudentName(inlineNameInput.trim());
+                        }
+                      }}
+                      className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2"
+                    >
+                      <input
+                        type="text"
+                        value={inlineNameInput}
+                        onChange={(e) => setInlineNameInput(e.target.value)}
+                        placeholder="Escribe tu nombre y apellido..."
+                        className="flex-1 bg-[#070c22] border border-cyan-900/80 focus:border-cyan-400 text-white px-3.5 py-2 rounded-xl text-xs font-medium focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                        autoFocus
+                        required
+                      />
+                      <div className="flex items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={() => setIsEditingNameInline(false)}
+                          className="px-3 py-2 rounded-xl text-xs font-mono text-slate-400 hover:text-white bg-slate-800/60 hover:bg-slate-800 cursor-pointer"
+                        >
+                          Cancelar
+                        </button>
+                        <button
+                          type="submit"
+                          disabled={!inlineNameInput.trim()}
+                          className="px-4 py-2 rounded-xl text-xs font-mono font-bold text-slate-950 bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 disabled:opacity-50 cursor-pointer shadow-md shadow-cyan-500/20"
+                        >
+                          Actualizar
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                )}
+
+                {/* Quick Indicators Strip */}
+                <div className="pt-2 border-t border-cyan-950/80 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs font-mono">
+                  <div className="bg-[#030612]/60 p-2 rounded-xl border border-cyan-950/60">
+                    <span className="text-white font-bold text-sm block">11</span>
+                    <span className="text-slate-400 text-[11px]">Materias Curriculares</span>
+                  </div>
+                  <div className="bg-[#030612]/60 p-2 rounded-xl border border-cyan-950/60">
+                    <span className="text-cyan-300 font-bold text-sm block">550</span>
+                    <span className="text-slate-400 text-[11px]">Tarjetas (50 por materia)</span>
+                  </div>
+                  <div className="bg-[#030612]/60 p-2 rounded-xl border border-cyan-950/60">
+                    <span className="text-amber-300 font-bold text-sm block">33</span>
+                    <span className="text-slate-400 text-[11px]">Exámenes (3 Parciales)</span>
+                  </div>
+                  <div className="bg-[#030612]/60 p-2 rounded-xl border border-cyan-950/60">
+                    <span className="text-emerald-400 font-bold text-sm block">Drive</span>
+                    <span className="text-slate-400 text-[11px]">Bibliografía Oficial</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -570,7 +466,7 @@ export const App: React.FC = () => {
             </div>
 
             {/* Subjects Grid (Space Lab Cards) */}
-            <div id="materias-grid">
+            <div id="materias-grid" className="scroll-mt-24">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
                   <Orbit className="w-5 h-5 text-cyan-400" />

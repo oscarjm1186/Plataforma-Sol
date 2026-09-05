@@ -4,7 +4,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   // --- PARCIAL 1: PROPIEDADES, PÉTREOS, CICLO DE VIDA Y HUELLA DE CARBONO (17 TARJETAS) ---
   {
     id: 'fc-mat-01',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Propiedades de los Materiales',
     front: '¿Cuál es la diferencia entre densidad real y densidad aparente de un material de construcción?',
@@ -13,7 +13,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-02',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Propiedades Físicas',
     front: '¿Qué es la higroscopicidad y la porosidad abierta en los materiales pétreos?',
@@ -22,7 +22,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-03',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Propiedades Mecánicas',
     front: '¿Qué diferencia a un material frágil de un material dúctil y maleable?',
@@ -31,7 +31,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-04',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Propiedades Térmicas',
     front: '¿Qué es la Conductividad Térmica (λ o k) y la Transmitancia Térmica (Valor U)?',
@@ -40,7 +40,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-05',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Inercia Térmica',
     front: '¿Qué es la inercia térmica y cómo ayuda a amortiguar las temperaturas extremas en una vivienda?',
@@ -49,7 +49,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-06',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Pétreos Naturales',
     front: '¿Cuáles son las características y aplicaciones del Tezontle y el Tepojal (Pumita) en la construcción?',
@@ -58,7 +58,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-07',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Pétreos Naturales',
     front: '¿Cuáles son las aplicaciones del Basalto y el Granito en la edificación?',
@@ -67,7 +67,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-08',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Pétreos Sedimentarios',
     front: '¿Qué es la Cantera y el Mármol y por qué requieren precauciones en exteriores?',
@@ -76,7 +76,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-09',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Sustentabilidad y ACV',
     front: '¿Qué es el Análisis de Ciclo de Vida (ACV) de un material de construcción?',
@@ -85,7 +85,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-10',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Energía Embebida',
     front: '¿Qué es la Energía Embebida o Incorporada (Embodied Energy) de un material?',
@@ -94,7 +94,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-11',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Huella de Carbono',
     front: '¿Qué es la Huella de Carbono de un material y por qué el cemento Portland tiene un impacto crítico?',
@@ -103,7 +103,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-12',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Materiales Locales',
     front: '¿Por qué la norma de edificación sustentable premia el uso de materiales de procedencia regional (radio de 500 km)?',
@@ -112,7 +112,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-13',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Reciclaje de Residuos (RCD)',
     front: '¿Qué son los Residuos de la Construcción y Demolición (RCD) y cómo se valorizan según la norma ambiental de CDMX (NADF-007-RNAT)?',
@@ -121,7 +121,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-14',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Toxicidad de Materiales',
     front: '¿Qué son los Compuestos Orgánicos Volátiles (COV / VOC) en pinturas y selladores y por qué deben evitarse?',
@@ -130,7 +130,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-15',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Madera Sustentable',
     front: '¿Qué es la certificación forestal FSC (Forest Stewardship Council) para madera en la construcción?',
@@ -139,7 +139,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-16',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Economía Circular',
     front: '¿Cómo se aplica el principio de la Economía Circular en la arquitectura y edificación?',
@@ -148,7 +148,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-17',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 0,
     category: 'Contenido Reciclado',
     front: '¿Cuál es la diferencia entre contenido reciclado post-industrial y post-consumo?',
@@ -159,7 +159,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   // --- PARCIAL 2: CONGLOMERANTES, CEMENTOS, MORTEROS, CERÁMICOS Y METALES (17 TARJETAS) ---
   {
     id: 'fc-mat-18',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Aglomerantes y Conglomerantes',
     front: '¿Cuál es la diferencia química entre un aglomerante aéreo y un conglomerante hidráulico?',
@@ -168,7 +168,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-19',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Yeso',
     front: '¿Cómo se obtiene el yeso de construcción y cuáles son sus propiedades y limitantes?',
@@ -177,7 +177,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-20',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Cal Hidratada',
     front: '¿Cuáles son los beneficios de incorporar calhidratada (cal apagada) en los morteros de albañilería?',
@@ -186,7 +186,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-21',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Cemento Portland',
     front: '¿Cuáles son las materias primas del Clinker de cemento Portland y a qué temperatura se cuecen?',
@@ -195,7 +195,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-22',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Tipos de Cemento en México',
     front: '¿Cuáles son los tipos de cemento normalizados en México según la norma NMX-C-414-ONNCCE?',
@@ -204,7 +204,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-23',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Cementos Sustentables',
     front: '¿Por qué el cemento CPC y los cementos con adiciones puzolánicas reducen el impacto ambiental?',
@@ -213,7 +213,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-24',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Puzolanas',
     front: '¿Qué es una puzolana y cómo reacciona químicamente dentro del concreto?',
@@ -222,7 +222,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-25',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Aditivos para Concreto',
     front: '¿Cómo contribuyen los aditivos reductores de agua de alto rango (superfluidificantes) a la sustentabilidad?',
@@ -231,7 +231,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-26',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Cerámicos de Mampostería',
     front: '¿Cuál es la diferencia entre un tabique rojo recocido artesanal y un tabique cerámico extruido industrializado?',
@@ -240,7 +240,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-27',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Tierra Compactada y Adobe',
     front: '¿Qué es el Bloque de Tierra Comprimida (BTC) y cuáles son sus ventajas ecológicas?',
@@ -249,7 +249,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-28',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Bloques de Concreto',
     front: '¿Cuáles son las características del Bloque Hueco de Concreto (Block) en la construcción moderna?',
@@ -258,7 +258,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-29',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Acero de Refuerzo Sustentable',
     front: '¿Por qué el acero es considerado uno de los materiales más sustentables y circulares de la ingeniería?',
@@ -267,7 +267,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-30',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Aluminio en Cancelería',
     front: '¿Cuáles son las ventajas y consideraciones del aluminio extruido en cancelería y fachadas?',
@@ -276,7 +276,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-31',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Vidrios de Seguridad',
     front: '¿Cuál es la diferencia entre el vidrio templado y el vidrio laminado?',
@@ -285,7 +285,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-32',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Vidrios de Control Solar',
     front: '¿Cómo funciona el vidrio doble con cámara (Duo-Vent) y el vidrio Low-E (Bajo Emisivo)?',
@@ -294,7 +294,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-33',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Pinturas Ecológicas',
     front: '¿Qué ventajas tienen las pinturas de silicato y pinturas de cal frente a las vinílicas plásticas tradicionales?',
@@ -303,7 +303,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-34',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 1,
     category: 'Bambú Estructural',
     front: '¿Por qué al bambú Guadua se le llama "el acero vegetal" en la construcción sustentable?',
@@ -314,7 +314,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   // --- PARCIAL 3: BIOCLIMÁTICA, ENVOLVENTES, ECOTECNIAS Y CERTIFICACIONES (16 TARJETAS) ---
   {
     id: 'fc-mat-35',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Diseño Bioclimático',
     front: '¿Cuál es la orientación solar más favorable para las fachadas principales en la zona central de México (CDMX, latitud ~19° N)?',
@@ -323,7 +323,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-36',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Protección Solar Pasiva',
     front: '¿Cuál es la diferencia de diseño entre un partelsol horizontal (alero) y un partelsol vertical (quilla)?',
@@ -332,7 +332,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-37',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Ventilación Pasiva',
     front: '¿Cómo funciona la ventilación cruzada natural y el efecto chimenea en un edificio?',
@@ -341,7 +341,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-38',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Aislamientos Térmicos',
     front: '¿Cuáles son los principales materiales aislantes térmicos utilizados en azoteas y muros?',
@@ -350,7 +350,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-39',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Techos Fríos',
     front: '¿Qué es el Índice de Reflectancia Solar (SRI) y cómo funciona un impermeabilizante reflectivo blanco?',
@@ -359,7 +359,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-40',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Energía Solar Térmica',
     front: '¿Cuál es la diferencia entre un calentador solar de colector plano y uno de tubos de vacío de borosilicato?',
@@ -368,7 +368,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-41',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Sistemas Fotovoltaicos',
     front: '¿Cómo funciona un sistema solar fotovoltaico interconectado a la red de CFE con medidor bidireccional?',
@@ -377,7 +377,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-42',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Captación de Agua de Lluvia',
     front: '¿Cuáles son los componentes de un sistema de captación y aprovechamiento pluvial (SCALL)?',
@@ -386,7 +386,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-43',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Tratamiento de Aguas Residuales',
     front: '¿Cuál es la diferencia entre Aguas Grises y Aguas Negras y cómo se reutilizan las grises?',
@@ -395,7 +395,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-44',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Biodigestores',
     front: '¿Cómo funciona un biodigestor anaeróbico autolimpiable residencial para zonas sin drenaje público?',
@@ -404,7 +404,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-45',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Azoteas Verdes',
     front: '¿Cuáles son las capas constructivas obligatorias de una azotea verde o techo naturado?',
@@ -413,7 +413,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-46',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Muros Verdes',
     front: '¿Qué beneficios ambientales y térmicos aporta un jardín vertical o muro verde en fachadas?',
@@ -422,7 +422,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-47',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Ahorro de Agua en Muebles',
     front: '¿Cuáles son los consumos máximos normativos para muebles hidrosanitarios ecológicos (NOM-008-CONAGUA)?',
@@ -431,7 +431,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-48',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Certificaciones Sustentables',
     front: '¿Qué es la certificación internacional LEED (Leadership in Energy and Environmental Design)?',
@@ -440,7 +440,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-49',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Certificaciones Sustentables',
     front: '¿Qué es la certificación EDGE (Excellence in Design for Greater Efficiencies) del Banco Mundial?',
@@ -449,7 +449,7 @@ export const MATERIALES_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-mat-50',
-    subjectId: 'materiales-construccion',
+    subjectId: 'materiales-sustentables',
     moduleIndex: 2,
     category: 'Sustentabilidad Integral',
     front: '¿Por qué la mejor estrategia sustentable en la edificación es el diseño pasivo antes de invertir en ecotecnias activas?',

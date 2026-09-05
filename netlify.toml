@@ -1,0 +1,17 @@
+# Netlify configuration file
+# CECyT 11 Wilfrido Massieu - Plataforma de Estudio Sol Mariana
+# 100% Client-Side SPA (no API key required)
+
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

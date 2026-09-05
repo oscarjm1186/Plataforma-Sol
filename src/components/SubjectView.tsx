@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   ArrowLeft, 
   BookOpen, 
@@ -65,6 +65,12 @@ export const SubjectView: React.FC<SubjectViewProps> = ({
   onSelectSubject
 }) => {
   const [activeTab, setActiveTab] = useState<'guide' | 'books' | 'flashcards' | 'videos' | 'exams'>(initialTab);
+
+  useEffect(() => {
+    if (initialTab) {
+      setActiveTab(initialTab);
+    }
+  }, [initialTab, subject.id]);
 
   const tabs = [
     { id: 'guide' as const, label: 'Guía de Estudio', icon: <BookOpen className="w-4 h-4" />, count: modules.length + ' Unidades' },

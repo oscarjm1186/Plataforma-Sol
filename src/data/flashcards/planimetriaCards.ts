@@ -4,7 +4,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   // --- PARCIAL 1: CONCEPTOS BÁSICOS, UNIDADES, CARTABONEO Y CINTA (17 TARJETAS) ---
   {
     id: 'fc-pla-01',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Conceptos Fundamentales',
     front: '¿Cuál es la diferencia técnica fundamental entre Topografía y Geodesia?',
@@ -13,7 +13,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-02',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Divisiones de la Topografía',
     front: '¿Cómo se divide la topografía para su estudio práctico?',
@@ -22,7 +22,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-03',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Unidades Agrarias',
     front: '¿A cuántos metros cuadrados equivale una hectárea, un área y una centiárea?',
@@ -31,7 +31,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-04',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Unidades Angulares',
     front: '¿Cómo se estructura el sistema sexagesimal utilizado en topografía?',
@@ -40,7 +40,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-05',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Cartaboneo de Pasos',
     front: '¿Qué es el cartaboneo de pasos y cómo se calcula la longitud del paso medio?',
@@ -49,7 +49,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-06',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Medición con Cinta',
     front: '¿Qué tipos de cintas métricas se utilizan en levantamientos y cuál es la más exacta?',
@@ -58,7 +58,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-07',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Errores en Medición con Cinta',
     front: '¿Qué es el error por catenaria al medir con cinta suspendida en el aire?',
@@ -67,7 +67,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-08',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Errores en Medición con Cinta',
     front: '¿Cuáles son los principales errores sistemáticos que afectan la medición con cinta?',
@@ -76,7 +76,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-09',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Medición en Pendiente',
     front: '¿En qué consiste el método del "escalonamiento" o "chacaleo" para medir distancias en terreno inclinado con cinta?',
@@ -85,7 +85,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-10',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Instrumentos Secundarios',
     front: '¿Qué son las balizas o jalones y cómo están pintados reglamentariamente?',
@@ -94,7 +94,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-11',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Instrumentos Secundarios',
     front: '¿Para qué se utilizan las fichas o agujas de agrimensor y cuántas componen un juego?',
@@ -103,7 +103,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-12',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Libreta de Campo',
     front: '¿Cómo se organiza y qué datos obligatorios contiene una libreta de tránsito de campo?',
@@ -112,7 +112,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-13',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Brigada de Campo',
     front: '¿Quiénes integran una brigada topográfica básica para levantamientos con cinta y teodolito?',
@@ -121,7 +121,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-14',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Monumentación',
     front: '¿Qué es una mojonera y cómo se materializa un vértice topográfico permanente?',
@@ -130,7 +130,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-15',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Alineación de Jalones',
     front: '¿Cómo alinea el operador a dos jalones intermedios entre dos vértices A y B no visibles entre sí sobre una loma?',
@@ -139,7 +139,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-16',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Precisión Relativa',
     front: '¿Cómo se expresa la precisión de una medición con cinta métrica?',
@@ -148,7 +148,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-17',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 0,
     category: 'Errores en Topografía',
     front: '¿Cuál es la diferencia entre una equivocación, un error sistemático y un error accidental?',
@@ -159,7 +159,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   // --- PARCIAL 2: MÉTODOS CON CINTA, HERÓN, RUMBOS Y AZIMUTES (17 TARJETAS) ---
   {
     id: 'fc-pla-18',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Trazo con Cinta',
     front: '¿Cómo se traza en campo una perpendicular a una recta AB desde un punto exterior P usando solo cinta (Método de la Cuerda)?',
@@ -168,7 +168,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-19',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Levantamiento con Cinta',
     front: '¿Cuáles son los 3 métodos clásicos para levantar un terreno pequeño utilizando exclusivamente cinta métrica?',
@@ -177,7 +177,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-20',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Fórmula de Herón',
     front: '¿Cuál es la fórmula de Herón de Alejandría para calcular el área de un triángulo conociendo sus tres lados a, b y c?',
@@ -186,7 +186,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-21',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Superficie por Triangulación',
     front: '¿Cómo se obtiene la superficie total de un polígono irregular de "n" lados levantado por diagonales?',
@@ -195,7 +195,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-22',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Meridianos de Referencia',
     front: '¿Cuáles son los 3 tipos de meridianos o nortes de referencia en topografía?',
@@ -204,7 +204,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-23',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Declinación Magnética',
     front: '¿Qué es la declinación magnética (δ) y cómo se corrige un rumbo magnético a astronómico?',
@@ -213,7 +213,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-24',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Rumbo Topográfico',
     front: '¿Qué es el RUMBO de una línea topográfica y cuál es su rango de valores?',
@@ -222,7 +222,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-25',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Azimut Topográfico',
     front: '¿Qué es el AZIMUT (Az) de una línea topográfica y cuál es su rango de valores?',
@@ -231,7 +231,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-26',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Conversión Rumbo - Azimut',
     front: '¿Cuáles son las fórmulas para convertir Rumbo a Azimut en los 4 cuadrantes?',
@@ -240,7 +240,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-27',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Conversión Azimut - Rumbo',
     front: '¿Cuáles son las fórmulas para convertir Azimut a Rumbo en los 4 cuadrantes?',
@@ -249,7 +249,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-28',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Contrarrumbo y Contraazimut',
     front: '¿Qué es el contrarrumbo y el contraazimut de una línea AB?',
@@ -258,7 +258,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-29',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Brújula Topográfica',
     front: '¿Por qué la brújula tipo Brunton o de agrimensor tiene las letras E y W invertidas en su carátula?',
@@ -267,7 +267,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-30',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Atracción Local',
     front: '¿Qué es la atracción local en una brújula y cómo se detecta en campo?',
@@ -276,7 +276,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-31',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Ángulo Interior por Rumbos',
     front: '¿Cómo se calcula el ángulo interior en un vértice conociendo los rumbos de sus dos lados adyacentes?',
@@ -285,7 +285,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-32',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Poligonales con Cinta',
     front: '¿Qué ventajas y limitaciones tiene un levantamiento con cinta y brújula?',
@@ -294,7 +294,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-33',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Trazo de Paralelas',
     front: '¿Cómo se traza en campo una recta paralela a una alineación dada AB a una distancia "d"?',
@@ -303,7 +303,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-34',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 1,
     category: 'Deslindes Topográficos',
     front: '¿Qué es un apeo y deslinde topográfico?',
@@ -314,7 +314,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   // --- PARCIAL 3: TEODOLITO, POLIGONAL CERRADA, COMPENSACIÓN Y COORDENADAS (16 TARJETAS) ---
   {
     id: 'fc-pla-35',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Teodolito y Tránsito',
     front: '¿Cuáles son las 3 partes principales en las que se divide un teodolito o tránsito?',
@@ -323,7 +323,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-36',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Puesta en Estación',
     front: '¿Cuáles son los pasos obligatorios para centrar y nivelar un teodolito sobre un punto en el terreno?',
@@ -332,7 +332,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-37',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Retícula del Anteojo',
     front: '¿Qué son los hilos estadimétricos del anteojo y cuál es su constante taquimétrica K?',
@@ -341,7 +341,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-38',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Poligonal Cerrada',
     front: '¿Cuál es la fórmula geométrica teórica para la suma de los ángulos interiores de un polígono cerrado de "n" lados?',
@@ -350,7 +350,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-39',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Error y Tolerancia Angular',
     front: '¿Cómo se calcula el error angular de cierre (Ea) y la tolerancia angular permitida (Ta)?',
@@ -359,7 +359,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-40',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Compensación Angular',
     front: '¿Cómo se compensa equitativamente el error angular entre los vértices de una poligonal?',
@@ -368,7 +368,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-41',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Cálculo de Azimutes',
     front: '¿Cuál es la fórmula para calcular el azimut del lado siguiente a partir del azimut anterior y el ángulo interior medido?',
@@ -377,7 +377,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-42',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Proyecciones Ortogonales',
     front: '¿Cómo se calculan las proyecciones ortogonales Norte-Sur (Y) y Este-Oeste (X) de un lado topográfico?',
@@ -386,7 +386,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-43',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Error de Cierre Lineal',
     front: '¿Cómo se calcula el error de cierre lineal (Ec) y la precisión de una poligonal cerrada?',
@@ -395,7 +395,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-44',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Compensación Lineal',
     front: '¿En qué consiste la Regla de la Brújula (Método de Bowditch) para corregir proyecciones?',
@@ -404,7 +404,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-45',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Coordenadas Cartesiana',
     front: '¿Cómo se calculan las coordenadas absolutas (X, Y) de los vértices a partir de las proyecciones corregidas?',
@@ -413,7 +413,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-46',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Método de Gauss / Determinantes',
     front: '¿Cómo se calcula la superficie del polígono mediante el método de determinantes (coordenadas cruzadas de Gauss)?',
@@ -422,7 +422,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-47',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Cuadro de Construcción',
     front: '¿Qué información obligatoria debe contener el Cuadro de Construcción en el plano topográfico?',
@@ -431,7 +431,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-48',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Estación Total Electrónica',
     front: '¿Cómo funciona una Estación Total electrónica y qué ventajas ofrece frente al teodolito óptico mecánico?',
@@ -440,7 +440,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-49',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Sistemas GNSS / GPS',
     front: '¿Qué es el posicionamiento RTK (Real Time Kinematic) con GPS/GNSS en topografía?',
@@ -449,7 +449,7 @@ export const PLANIMETRIA_FLASHCARDS: Flashcard[] = [
   },
   {
     id: 'fc-pla-50',
-    subjectId: 'topografia',
+    subjectId: 'planimetria-aplicada',
     moduleIndex: 2,
     category: 'Fotogrametría con Drones',
     front: '¿Cómo se complementa la planimetría tradicional con el levantamiento mediante drones (RPA)?',
