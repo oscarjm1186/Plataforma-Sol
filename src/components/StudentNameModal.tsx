@@ -88,7 +88,7 @@ export const StudentNameModal: React.FC<StudentNameModalProps> = ({
 
         <div className="space-y-4 text-xs relative z-10">
           <p className="text-slate-300 leading-relaxed bg-[#030614] p-3.5 rounded-2xl border border-indigo-950">
-            Sol Mariana preparó esta plataforma para el <strong>3er Semestre de Técnico en Construcción</strong> y la comparte contigo. Al escribir tu nombre, los saludos, bitácoras y resultados de exámenes se personalizarán para ti.
+            Sol tiene esta plataforma para el <strong>3er Semestre de Técnico en Construcción</strong> y la comparte contigo. Al escribir tu nombre, los saludos, bitácoras y resultados de exámenes se personalizarán para ti.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-3">
@@ -125,11 +125,11 @@ export const StudentNameModal: React.FC<StudentNameModalProps> = ({
                   className="flex items-center gap-1.5 text-[11px] font-mono text-amber-300/90 hover:text-amber-200 underline cursor-pointer p-1"
                 >
                   <RotateCcw className="w-3 h-3" />
-                  <span>Restablecer a Sol Mariana</span>
+                  <span>Restablecer a Sol</span>
                 </button>
               ) : (
                 <span className="text-[11px] text-slate-500 font-mono">
-                  Por defecto: Sol Mariana
+                  Por defecto: Sol
                 </span>
               )}
 

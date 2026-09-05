@@ -361,7 +361,7 @@ export const StudyGuideTab: React.FC<StudyGuideTabProps> = ({
                         {isRevealed && (
                           <div className="mt-3 p-4 bg-[#070b22] rounded-xl border border-cyan-500/40 text-xs text-slate-200 whitespace-pre-line animate-fadeIn font-mono">
                             <span className="font-bold text-cyan-300 block mb-1">
-                              Solución oficial y procedimiento:
+                              Solución y procedimiento:
                             </span>
                             {ex.solution}
                           </div>
