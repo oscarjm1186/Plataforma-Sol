@@ -35,7 +35,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onNavigateView,
   completedTopicsCount,
   totalTopicsCount,
-  studentName = 'Sol Mariana',
+  studentName = 'Sol',
   onOpenNameModal
 }) => {
   const isSol = studentName.trim().toLowerCase().includes('sol');
@@ -56,31 +56,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="bg-[#030409] border-b border-cyan-950/60 text-[#a6b9cc] py-1.5 px-4 text-xs font-medium">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
-            <span className="bg-cyan-950/60 text-cyan-300 border border-cyan-500/30 px-2.5 py-0.5 rounded-full text-[10px] tracking-widest uppercase font-mono font-bold flex items-center gap-1 shadow-xs">
-              <Satellite className="w-3 h-3 text-cyan-400" />
-              CECyT 11 • Wilfrido Massieu
-            </span>
-            <span className="hidden sm:inline text-[#a6b9cc] text-[11px] font-mono">
-              Técnico en Construcción • 3er Semestre
-            </span>
           </div>
           <div className="flex items-center gap-3">
-            <span className="flex items-center gap-1.5 text-slate-300 text-xs font-mono">
-              <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
-              <span>Plataforma de estudio para <strong className="text-amber-300 font-bold">{studentName}</strong> ☀️</span>
-            </span>
-
-            {onOpenNameModal && (
-              <button
-                type="button"
-                onClick={onOpenNameModal}
-                className="inline-flex items-center gap-1 text-[10px] font-mono font-bold bg-cyan-950/70 hover:bg-cyan-900 text-cyan-300 hover:text-cyan-200 border border-cyan-500/40 hover:border-cyan-400/80 px-2.5 py-0.5 rounded-full transition cursor-pointer shadow-xs"
-                title="Personalizar nombre del estudiante para compartir plataforma"
-              >
-                <User className="w-3 h-3 text-cyan-400" />
-                <span>{isSol ? 'No soy Sol' : 'Cambiar estudiante'}</span>
-              </button>
-            )}
           </div>
         </div>
       </div>
@@ -104,14 +81,12 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div>
             <div className="flex items-center gap-2">
               <span className="font-heading font-extrabold text-lg tracking-tight text-white group-hover:text-cyan-300 transition-colors">
-                Academia Sol Mariana
+                Plataforma De Estudio
               </span>
-              <span className="text-[10px] bg-cyan-950/70 text-cyan-300 px-2 py-0.5 rounded-full font-mono font-bold border border-cyan-500/30 tracking-wider hidden sm:inline">
-                3ER SEMESTRE
-              </span>
+              
             </div>
             <p className="text-[11px] text-[#a6b9cc] font-normal flex items-center gap-1">
-              <span>CECyT 11 Wilfrido Massieu</span>
+              <span>Contenido Temático: </span>
               <span className="text-cyan-900">•</span>
               <span className="text-cyan-400 font-mono">{subjects.length} Materias</span>
             </p>
@@ -141,7 +116,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             }`}
           >
             <FolderOpen className="w-3.5 h-3.5 text-amber-400" />
-            <span>Biblioteca Digital & Drive</span>
+            <span>Biblioteca Google Drive</span>
           </button>
 
           <button
