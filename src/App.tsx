@@ -9,7 +9,6 @@ import {
   Heart, 
   CheckCircle2, 
   Search, 
-  ArrowRight,
   Orbit,
   Telescope,
   Radio,
@@ -42,6 +41,7 @@ import {
   saveStudentName,
   DEFAULT_STUDENT_NAME
 } from './utils/storage';
+import { getSubjectYoutubePlaylist } from './data/driveLinksData';
 
 import { Navbar } from './components/Navbar';
 import { SubjectCard } from './components/SubjectCard';
@@ -149,20 +149,6 @@ export const App: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleScrollToSubjects = () => {
-    if (selectedSubject || activeMainView !== 'home') {
-      setSelectedSubject(null);
-      setActiveMainView('home');
-      setTimeout(() => {
-        const el = document.getElementById('materias-grid');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      const el = document.getElementById('materias-grid');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   // Compute total topics across all subjects
   let totalTopicsAcrossAllSubjects = 0;
   Object.values(ALL_GUIDES_DATA).forEach(modules => {
@@ -227,7 +213,7 @@ export const App: React.FC = () => {
             masteredCards={masteredCards}
             examAttempts={examAttempts.filter(a => a.subjectId === selectedSubject.id)}
             driveUrl={driveLinks[selectedSubject.id]}
-            youtubePlaylistUrl={youtubePlaylists[selectedSubject.id]}
+            youtubePlaylistUrl={youtubePlaylists[selectedSubject.id] || selectedSubject.youtubePlaylistUrl || getSubjectYoutubePlaylist(selectedSubject.id)}
             initialTab={initialTab}
             onBack={() => setSelectedSubject(null)}
             onToggleTopic={handleToggleTopic}
@@ -263,9 +249,6 @@ export const App: React.FC = () => {
           <div className="space-y-8">
             {/* Minimalist, Clean & Intuitive Home Header */}
             <div className="bg-[#060a18]/85 border border-cyan-950/80 rounded-3xl p-6 md:p-8 relative overflow-hidden shadow-2xl shadow-black/80 backdrop-blur-xl">
-              <div className="absolute top-0 right-0 p-4 opacity-5 text-7xl font-black italic select-none pointer-events-none text-cyan-400 font-space">
-                CECYT 11
-              </div>
               <div className="absolute -right-12 -bottom-12 w-48 h-48 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none" />
               <div className="absolute -left-12 -top-12 w-48 h-48 rounded-full bg-blue-500/10 blur-3xl pointer-events-none" />
 
@@ -273,7 +256,7 @@ export const App: React.FC = () => {
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div className="inline-flex items-center gap-2 bg-cyan-950/60 text-cyan-300 border border-cyan-500/30 px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider">
                     <Satellite className="w-3.5 h-3.5 text-cyan-400" />
-                    <span>IPN • CECyT 11 "Wilfrido Massieu" • Técnico en Construcción</span>
+                    <span>Técnico en Construcción</span>
                   </div>
 
                   {/* Quick Button: Cambiar Estudiante */}
@@ -295,10 +278,10 @@ export const App: React.FC = () => {
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div>
                     <h1 className="text-2xl md:text-3xl font-heading font-extrabold tracking-tight text-white">
-                      ¡Hola, {studentName}! ☀️
+                      {isSol ? '¡Hola Sol!' : `¡Hola, ${studentName}!`}
                     </h1>
                     <p className="text-xs md:text-sm text-[#a6b9cc] mt-1 max-w-2xl leading-relaxed">
-                      Plataforma de estudio para el <strong>Tercer Semestre</strong>. Selecciona cualquier materia para acceder de inmediato a sus <strong>guías de estudio completas</strong>, <strong>libros y Google Drive oficial</strong>, <strong>50 tarjetas de repaso</strong> o su <strong>simulador de examen</strong>.
+                      Criatura, diseñé esta plataforma para que te apoyes a estudiar, cada materia tiene una lista de reproducción de Youtube, un link a una carpeta de Google Drive con libros de cada materia, exámenes parciales de práctica y tarjetas interactivas de repaso que te serán de mucha ayuda. ¡Aprovéchala!
                     </p>
                   </div>
 
@@ -471,7 +454,7 @@ export const App: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <Orbit className="w-5 h-5 text-cyan-400" />
                   <h2 className="font-heading font-extrabold text-xl text-white">
-                    Materias del 3er Semestre (CECyT 11)
+                    Materias del 3er Semestre
                   </h2>
                 </div>
                 <span className="text-xs text-[#a6b9cc] font-mono">
@@ -494,48 +477,10 @@ export const App: React.FC = () => {
                       completedTopicsCount={subCompletedTopics}
                       totalTopicsCount={subTotalTopics}
                       driveLink={driveLinks[subject.id]}
+                      youtubePlaylistUrl={youtubePlaylists[subject.id] || subject.youtubePlaylistUrl || getSubjectYoutubePlaylist(subject.id)}
                     />
                   );
                 })}
-              </div>
-            </div>
-
-            {/* Student Dedicated Inspiration Bar */}
-            <div className="bg-[#060a18]/85 border border-cyan-950/80 rounded-3xl p-6 md:p-8 shadow-2xl shadow-black/80 backdrop-blur-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
-              <div className="flex items-start gap-4 relative z-10">
-                <div className="w-12 h-12 rounded-2xl bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/30 shadow-md">
-                  ☀️
-                </div>
-                <div>
-                  <h3 className="font-heading font-extrabold text-base text-white flex items-center gap-2">
-                    <span>Plataforma de Estudio para {studentName}</span>
-                    <span className="text-[10px] font-mono bg-cyan-950 text-cyan-300 px-2 py-0.5 rounded-full border border-cyan-500/30">
-                      Ciclo Escolar Activo
-                    </span>
-                  </h3>
-                  <p className="text-xs text-[#a6b9cc] mt-1 max-w-2xl leading-relaxed">
-                    Todo el plan curricular del 3er semestre de Técnico en Construcción (CECyT 11 Wilfrido Massieu) organizado con guías interactivas por parcial, bibliografía oficial sincronizada con Google Drive, tarjetas de estudio y exámenes departamentales de 100 reactivos.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-3 w-full md:w-auto relative z-10">
-                <button
-                  type="button"
-                  onClick={() => setIsNameModalOpen(true)}
-                  className="flex-1 md:flex-initial flex items-center justify-center gap-1.5 text-xs font-mono font-medium px-4 py-2.5 rounded-xl border border-cyan-500/30 bg-cyan-950/50 hover:bg-cyan-900/70 text-cyan-300 transition cursor-pointer"
-                >
-                  <User className="w-3.5 h-3.5" />
-                  <span>{isSol ? 'No soy Sol' : 'Cambiar estudiante'}</span>
-                </button>
-                <button
-                  onClick={handleScrollToSubjects}
-                  className="flex-1 md:flex-initial flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 hover:from-cyan-300 hover:to-blue-400 text-slate-950 text-xs font-bold px-5 py-2.5 rounded-xl transition cursor-pointer shadow-lg shadow-cyan-950/50 font-mono"
-                >
-                  <span>Explorar Plan de 11 Materias</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
               </div>
             </div>
           </div>
@@ -544,15 +489,8 @@ export const App: React.FC = () => {
 
       {/* Footer */}
       <footer className="border-t border-cyan-950/80 bg-[#030409] py-6 mt-12 text-center text-xs text-[#a6b9cc]">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono">
-          <div className="flex items-center gap-2">
-            <span className="font-extrabold text-cyan-400">IPN • CECyT 11 "Wilfrido Massieu"</span>
-            <span className="text-slate-600">• Técnico en Construcción</span>
-          </div>
-          <div className="text-[#a6b9cc] flex items-center gap-1.5">
-            <span>Plataforma de estudio dedicada a</span>
-            <strong className="text-amber-300 font-bold">{studentName} ☀️</strong>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-center font-mono">
+          <span>Desarrollado por Oscar Jimenez</span>
         </div>
       </footer>
 

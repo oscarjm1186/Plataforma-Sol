@@ -59,7 +59,7 @@ export const BooksTab: React.FC<BooksTabProps> = ({
                 Libros y Recursos: {subject.name}
               </h2>
               <p className="text-xs md:text-sm text-[#a6b9cc] mt-1 max-w-2xl leading-relaxed">
-                Textos recomendados por el programa de estudios del CECyT 11 &ldquo;Wilfrido Massieu&rdquo;, apuntes de academia y accesos directos en la nube.
+                Textos recomendados por el programa de estudios de Técnico en Construcción, apuntes de estudio y accesos directos en la nube.
               </p>
             </div>
           </div>

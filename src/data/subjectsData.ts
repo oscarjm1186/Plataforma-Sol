@@ -15,7 +15,7 @@ export const SUBJECTS: Subject[] = [
     description: 'Sistemas coordenados, línea recta, cónicas (circunferencia, parábola, elipse, hipérbola), coordenadas polares y paramétricas.',
     competenceGeneral: 'Resuelve problemas referentes a lugares geométricos y sus respectivas ecuaciones, utilizando los diferentes sistemas de coordenadas, en situaciones académicas y sociales.',
     driveFolderUrl: 'https://drive.google.com/drive/folders/1L1wMiPAkwFkD-luVK9DZAEPrmqphfKr2?usp=drive_link',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLGeometriaAnaliticaIPN'
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLUf2zrcpinYk'
   },
   {
     id: 'fisica-1',
@@ -31,7 +31,7 @@ export const SUBJECTS: Subject[] = [
     description: 'Sistemas de unidades y teoría de errores, álgebra vectorial, estática y equilibrio de cuerpos rígidos, y cinemática en una y dos dimensiones.',
     competenceGeneral: 'Resuelve problemas de Estática y Cinemática basándose en leyes y principios de la Física estableciendo una interrelación entre su entorno, ciencia y tecnología.',
     driveFolderUrl: 'https://drive.google.com/drive/folders/1bmUZe8Zwkr3-iOXzkTxMRwvmRwvYTn9A?usp=drive_link',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLFisica1MassieuIPN'
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLTo_9e4cEXlE'
   },
   {
     id: 'quimica-1',
@@ -47,7 +47,7 @@ export const SUBJECTS: Subject[] = [
     description: 'Materia y energía, modelos y estructura atómica, números cuánticos, tabla periódica, enlaces químicos y nomenclatura inorgánica (IUPAC y tradicional).',
     competenceGeneral: 'Argumenta las bases teórico-prácticas del campo de la química fundamental mediante principios que las relacionen en su vida cotidiana y la preservación del entorno, con visión hacia el desarrollo sustentable.',
     driveFolderUrl: 'https://drive.google.com/drive/folders/1Zsmz2n-6CYpWETssuH2aduiin9rExfIk?usp=drive_link',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLQuimicaInorganicaIPN'
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLUe-i2lPaovQ'
   },
   {
     id: 'dibujo-tecnico-1',
@@ -62,8 +62,8 @@ export const SUBJECTS: Subject[] = [
     accentHex: '#d97706',
     description: 'Normatividad oficial mexicana (DGN y NMX), trazo a mano alzada y con instrumentos, rotulación normalizada, acotación, escalas y proyecciones axonométricas/isométricas.',
     competenceGeneral: 'Aplica métodos de representación gráfica a mano alzada, con instrumentos y software, conforme a las normas oficiales de Ingeniería vigentes.',
-    driveFolderUrl: 'https://drive.google.com/drive/folders/1-SOL-DIBUJO-TECNICO1-CECYT11-OFICIAL',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLDibujoTecnicoMassieu'
+    driveFolderUrl: 'https://drive.google.com/drive/folders/1-SOL-DIBUJO-TECNICO1-OFICIAL',
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLNtmgjqlJ3hY'
   },
   {
     id: 'obra-negra',
@@ -79,7 +79,7 @@ export const SUBJECTS: Subject[] = [
     description: 'Actividades preliminares, trazo y nivelación (método 3-4-5), cimentaciones, zapatas, muros (hilo, tizón, capuchino), losas macizas y aligeradas, trabes, columnas y dosificación de concreto.',
     competenceGeneral: 'Aplica los sistemas y procedimientos constructivos de obra negra de los elementos que integran la construcción de casa habitación de acuerdo a la normatividad vigente.',
     driveFolderUrl: 'https://drive.google.com/drive/folders/1J7yLvPd-K_IfIJwlYnqu8LIDppFkjTdE?usp=drive_link',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLObraNegraConstruccion'
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLfk5_QHrlhCg'
   },
   {
     id: 'normas-tramitaciones',
@@ -95,7 +95,7 @@ export const SUBJECTS: Subject[] = [
     description: 'Reglamento de Construcciones para el DF/CDMX y NTC, figuras de D.R.O. y Corresponsables, Manifestaciones de Construcción Tipo A, B y C, Alineamiento y Número Oficial, dimensiones mínimas de locales.',
     competenceGeneral: 'Verifica el cumplimiento de las normas técnicas y reglamentos en un proyecto arquitectónico de casa-habitación y tramita licencias y permisos ante las dependencias correspondientes.',
     driveFolderUrl: 'https://drive.google.com/drive/folders/1pf1eWl64VoaE1iDNUmWiCIUQFNt9wbUO?usp=drive_link',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLNormasTramitacionesCDMX'
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLNm5D-V1RTEU'
   },
   {
     id: 'planimetria-aplicada',
@@ -111,7 +111,7 @@ export const SUBJECTS: Subject[] = [
     description: 'Topografía básica y planimetría, instrumentos de medición (tránsito, cinta, estación total), libreta de campo, métodos de levantamiento con cinta y cálculo analítico de poligonales.',
     competenceGeneral: 'Resuelve problemas topográficos considerando las características físicas del lugar con la metodología y tecnología vigente, en un contexto social.',
     driveFolderUrl: 'https://drive.google.com/drive/folders/17J46DQjWxRNFutkMWLi9KCY6CINoNfQY?usp=drive_link',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLPlanimetriaTopografia'
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLZDpkkVM3ygXHWFgjQKM4HGF4d29dbafj'
   },
   {
     id: 'materiales-sustentables',
@@ -127,7 +127,7 @@ export const SUBJECTS: Subject[] = [
     description: 'Arquitectura bioclimática, huella ecológica de la edificación, ecotecnias (captación pluvial, celdas solares, biodigestores), materiales de bajo impacto y certificación NMX-AA-164 / LEED.',
     competenceGeneral: 'Propone y aplica materiales ecológicos y tecnologías sustentables en proyectos de edificación, optimizando el uso de energía y recursos naturales conforme a la normatividad ambiental.',
     driveFolderUrl: 'https://drive.google.com/drive/folders/1VfrQ8p1xSW_NSxN-3OQk3qyRefZINy2A?usp=drive_link',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLSustentabilidadConstruccion'
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLMUslBMpa-Og'
   },
   {
     id: 'entorno-socioeconomico',
@@ -143,7 +143,7 @@ export const SUBJECTS: Subject[] = [
     description: 'Modos de producción, crisis de 1929, postguerra y guerra fría, modelos económicos en México (1940 a la fecha), sectores productivos, indicadores económicos (PIB, PNB, PEA) y marco constitucional.',
     competenceGeneral: 'Argumenta las condiciones sociales, económicas y políticas de México en el contexto nacional e internacional, vinculando su contexto personal y social.',
     driveFolderUrl: 'https://drive.google.com/drive/folders/1hyBrzeUBaadjHljnQoGG5Teh33-M3kvz?usp=drive_link',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLEntornoSocioeconomicoMexico'
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLKRH1FKo1sz8'
   },
   {
     id: 'comunicacion-cientifica',
@@ -159,7 +159,7 @@ export const SUBJECTS: Subject[] = [
     description: 'El discurso y texto científico, proceso metodológico de investigación documental, fuentes de información, fichas bibliográficas, hemerográficas y de trabajo, y estructura del reporte técnico.',
     competenceGeneral: 'Establece comunicación científica a través del discurso elaborado en el marco de la metodología de la investigación documental, aplicado en el contexto académico y social.',
     driveFolderUrl: 'https://drive.google.com/drive/folders/1T26cF0RPkH_03kaq0S6syBhks-fnFKba?usp=sharing',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLComunicacionCientificaIPN'
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLJDmxGB2xEaw'
   },
   {
     id: 'ingles-3',
@@ -175,6 +175,6 @@ export const SUBJECTS: Subject[] = [
     description: 'Simple Past, regular/irregular verbs, Past Continuous, Wh- questions, adverbs of sequence & manner, intensifiers, used to, connectors of contrast, comparatives & superlatives, be going to & future.',
     competenceGeneral: 'Satisface necesidades comunicativas en lengua inglesa utilizando pasado simple, pasado continuo, conectores, comparativos, superlativos y formas futuras para contextos formales e informales.',
     driveFolderUrl: 'https://drive.google.com/drive/folders/1g5TgeQFQ5oLNLDztgGOq3CFzfsbLPm6q?usp=drive_link',
-    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLIngles3TecnicoIPN'
+    youtubePlaylistUrl: 'https://www.youtube.com/playlist?list=PLNLDdYgdU2iI'
   }
 ];

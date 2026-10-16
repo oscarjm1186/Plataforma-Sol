@@ -239,7 +239,7 @@ export const ExamTab: React.FC<ExamTabProps> = ({
               <span className="font-extrabold text-amber-300 text-sm">120 Minutos</span>
             </div>
             <div className="bg-[#030614] p-3.5 rounded-2xl border border-indigo-950">
-              <span className="text-slate-400 block text-[11px]">Escala IPN</span>
+              <span className="text-slate-400 block text-[11px]">Escala Oficial</span>
               <span className="font-extrabold text-white text-sm">0 a 10 (Aprueba ≥6)</span>
             </div>
           </div>
@@ -273,14 +273,14 @@ export const ExamTab: React.FC<ExamTabProps> = ({
 
             <p className="text-xs mt-1 max-w-md mx-auto text-slate-300">
               {latestAttempt.passed 
-                ? 'Has demostrado un excelente dominio de los reactivos evaluados en esta materia del CECyT 11.' 
+                ? 'Has demostrado un excelente dominio de los reactivos evaluados en esta materia.' 
                 : 'No te preocupes; revisa los reactivos erróneos abajo y consulta los temas en la guía para reforzar.'}
             </p>
 
             {/* Scores summary */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl mx-auto mt-6 text-xs font-mono">
               <div className="bg-[#030614] p-3.5 rounded-2xl border border-indigo-950">
-                <span className="text-slate-400 block text-[11px]">Calificación IPN</span>
+                <span className="text-slate-400 block text-[11px]">Calificación Final</span>
                 <span className={`font-extrabold text-2xl ${latestAttempt.passed ? 'text-emerald-400' : 'text-amber-400'}`}>
                   {latestAttempt.score} / 10
                 </span>

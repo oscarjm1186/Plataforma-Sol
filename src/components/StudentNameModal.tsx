@@ -69,7 +69,7 @@ export const StudentNameModal: React.FC<StudentNameModalProps> = ({
               <h3 className="font-heading font-extrabold text-sm text-white flex items-center gap-1.5">
                 <span>Personalizar Estudiante</span>
                 <span className="text-[10px] bg-amber-950/50 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30 font-mono">
-                  CECyT 11
+                  Técnico en Construcción
                 </span>
               </h3>
               <p className="text-[11px] text-[#a6b9cc]">

@@ -159,7 +159,7 @@ export function calculateAstronomicalTelemetry(date: Date = new Date()): Astrono
       system: 'Sistema Solar (Estrella Tipo Espectral G2V Helios)',
       planetaryPosition: '3er Planeta (Tierra / Gaia), Órbita Elíptica e = 0.0167',
       surfaceCoordinates: '19°29\'58.2" N, 99°10\'07.4" W • Altitud 2,240 msnm',
-      station: 'Laboratorio Técnico CECyT 11 Wilfrido Massieu (IPN, CDMX)',
+      station: 'Estación Técnica de Construcción (CDMX)',
     },
     positionVector: {
       xAU,

@@ -68,21 +68,16 @@ export function saveDriveLink(subjectId: string, url: string): void {
 
 export function getYoutubePlaylists(): { [subjectId: string]: string } {
   try {
-    const raw = localStorage.getItem(STORAGE_KEYS.YOUTUBE_PLAYLISTS);
-    if (raw) {
-      const parsed = JSON.parse(raw);
-      return { ...GHOST_YOUTUBE_PLAYLISTS, ...parsed };
-    }
+    // Clear any previous custom playlists or overrides to protect the official lists
+    localStorage.removeItem(STORAGE_KEYS.YOUTUBE_PLAYLISTS);
     return { ...GHOST_YOUTUBE_PLAYLISTS };
   } catch {
     return { ...GHOST_YOUTUBE_PLAYLISTS };
   }
 }
 
-export function saveYoutubePlaylist(subjectId: string, url: string): void {
-  const current = getYoutubePlaylists();
-  current[subjectId] = url;
-  localStorage.setItem(STORAGE_KEYS.YOUTUBE_PLAYLISTS, JSON.stringify(current));
+export function saveYoutubePlaylist(_subjectId: string, _url: string): void {
+  // Playlists are protected and immutable per requirements
 }
 
 export function getCustomVideos(): VideoLesson[] {

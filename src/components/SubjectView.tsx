@@ -10,9 +10,11 @@ import {
   Youtube, 
   ChevronRight,
   Sparkles,
-  Heart
+  Heart,
+  ExternalLink
 } from 'lucide-react';
 import { Subject, StudyModule, BookReference, Flashcard, VideoLesson, ExamAttemptRecord } from '../types';
+import { getSubjectYoutubePlaylist } from '../data/driveLinksData';
 import { StudyGuideTab } from './StudyGuideTab';
 import { BooksTab } from './BooksTab';
 import { FlashcardsTab } from './FlashcardsTab';
@@ -65,6 +67,7 @@ export const SubjectView: React.FC<SubjectViewProps> = ({
   onSelectSubject
 }) => {
   const [activeTab, setActiveTab] = useState<'guide' | 'books' | 'flashcards' | 'videos' | 'exams'>(initialTab);
+  const effectiveYoutubeUrl = youtubePlaylistUrl || subject.youtubePlaylistUrl || getSubjectYoutubePlaylist(subject.id);
 
   useEffect(() => {
     if (initialTab) {
@@ -103,21 +106,24 @@ export const SubjectView: React.FC<SubjectViewProps> = ({
               href={driveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs bg-[#070b22] hover:bg-[#0c1236] text-amber-300 border border-amber-500/40 font-bold px-3 py-1.5 rounded-xl flex items-center gap-1.5 transition shadow-sm font-mono"
+              className="text-xs bg-[#070b22] hover:bg-[#0c1236] text-amber-300 border border-amber-500/40 font-bold px-3 py-1.5 rounded-xl flex items-center gap-1.5 transition shadow-sm font-mono cursor-pointer"
+              title={`Abrir carpeta de Google Drive para ${subject.name}`}
             >
               <FolderOpen className="w-3.5 h-3.5 text-amber-400" />
               <span className="hidden sm:inline">Drive de la Materia</span>
             </a>
           )}
-          {youtubePlaylistUrl && (
+          {effectiveYoutubeUrl && (
             <a
-              href={youtubePlaylistUrl}
+              href={effectiveYoutubeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs bg-[#070b22] hover:bg-[#0c1236] text-rose-300 border border-rose-500/40 font-bold px-3 py-1.5 rounded-xl flex items-center gap-1.5 transition shadow-sm font-mono"
+              className="text-xs bg-[#070b22] hover:bg-rose-950/80 text-rose-300 hover:text-white border border-rose-500/40 font-bold px-3 py-1.5 rounded-xl flex items-center gap-1.5 transition shadow-sm font-mono cursor-pointer"
+              title={`Abrir lista de reproducción de YouTube para ${subject.name}`}
             >
               <Youtube className="w-3.5 h-3.5 text-rose-400" />
-              <span className="hidden sm:inline">Videos y Clases</span>
+              <span>Playlist YouTube</span>
+              <ExternalLink className="w-3 h-3 opacity-70" />
             </a>
           )}
         </div>
@@ -159,7 +165,7 @@ export const SubjectView: React.FC<SubjectViewProps> = ({
 
           <div className="flex flex-row md:flex-col items-end justify-between md:justify-center gap-2 shrink-0 relative z-10">
             <div className="text-right">
-              <span className="text-[11px] text-cyan-400 font-mono block">CECyT 11 IPN</span>
+              <span className="text-[11px] text-cyan-400 font-mono block">3er Semestre</span>
               <span className="text-xs font-bold text-slate-300">Técnico en Construcción</span>
             </div>
             <div className="text-right text-[11px] text-amber-400 font-mono font-semibold flex items-center gap-1">
@@ -230,7 +236,7 @@ export const SubjectView: React.FC<SubjectViewProps> = ({
           <VideosTab
             subject={subject}
             videos={videos}
-            customPlaylistUrl={youtubePlaylistUrl}
+            customPlaylistUrl={effectiveYoutubeUrl}
           />
         )}
 

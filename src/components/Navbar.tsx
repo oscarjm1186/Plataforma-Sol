@@ -52,15 +52,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="sticky top-0 z-40 bg-[#050609]/92 backdrop-blur-2xl border-b border-cyan-950/80 shadow-2xl shadow-black/80">
-      {/* Top Banner: Space Station Telemetry / Dedication */}
-      <div className="bg-[#030409] border-b border-cyan-950/60 text-[#a6b9cc] py-1.5 px-4 text-xs font-medium">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
-          </div>
-          <div className="flex items-center gap-3">
-          </div>
-        </div>
-      </div>
+
 
       {/* Main Nav Controls */}
       <div className="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-4">

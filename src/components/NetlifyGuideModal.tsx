@@ -42,11 +42,11 @@ export const NetlifyGuideModal: React.FC<NetlifyGuideModalProps> = ({ isOpen, on
               <span>1. Cómo abrir y editar el código en VS Code</span>
             </div>
             <p className="mb-3 leading-relaxed text-slate-400">
-              Puedes descargar el código fuente en archivo <strong className="text-white">ZIP</strong> o vincularlo a tu cuenta de <strong className="text-white">GitHub</strong> desde el menú de opciones de Google AI Studio.
+              Puedes descargar el código fuente en archivo <strong className="text-white">ZIP</strong> o vincularlo a tu repositorio de <strong className="text-white">GitHub</strong> para trabajar en local.
             </p>
             <div className="bg-slate-900 text-slate-200 p-3.5 rounded-xl border border-slate-800 font-mono text-[11px] space-y-1">
               <div><span className="text-slate-500"># 1. Descomprime y abre la carpeta en VS Code</span></div>
-              <div><span className="text-emerald-400">cd</span> plataforma-sol-mariana</div>
+              <div><span className="text-emerald-400">cd</span> plataforma-estudio</div>
               <div><span className="text-slate-500"># 2. Instala dependencias</span></div>
               <div><span className="text-emerald-400">npm install</span></div>
               <div><span className="text-slate-500"># 3. Inicia el servidor de desarrollo local</span></div>

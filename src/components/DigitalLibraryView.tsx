@@ -103,7 +103,7 @@ export const DigitalLibraryView: React.FC<DigitalLibraryViewProps> = ({
                 </span>
               </div>
               <p className="text-xs md:text-sm text-slate-300 mt-1.5 max-w-2xl leading-relaxed">
-                Repositorio central del <strong>3er Semestre de Construcción (CECyT 11 Wilfrido Massieu)</strong>. Accede a las carpetas oficiales de Google Drive (libros en PDF, guías y apuntes) y listas de reproducción de YouTube para cada una de las 11 materias.
+                Repositorio central del <strong>3er Semestre de Técnico en Construcción</strong>. Accede a las carpetas de Google Drive (libros en PDF, guías y apuntes) y listas de reproducción de YouTube para cada una de las 11 materias.
               </p>
             </div>
           </div>

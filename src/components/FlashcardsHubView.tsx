@@ -105,7 +105,7 @@ export const FlashcardsHubView: React.FC<FlashcardsHubViewProps> = ({
                 </span>
               </div>
               <p className="text-xs md:text-sm text-slate-300 mt-1.5 max-w-2xl leading-relaxed">
-                Selecciona la materia que deseas repasar. Cada mazo incluye fórmulas, conceptos clave, normas y síntesis técnicas preparadas para los exámenes departamentales del <strong>3er Semestre (CECyT 11)</strong>.
+                Selecciona la materia que deseas repasar. Cada mazo incluye fórmulas, conceptos clave, normas y síntesis técnicas preparadas para los exámenes departamentales del <strong>3er Semestre de Técnico en Construcción</strong>.
               </p>
             </div>
           </div>

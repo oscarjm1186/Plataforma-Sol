@@ -1,6 +1,6 @@
 /**
  * =========================================================================
- * ENLACES DE GOOGLE DRIVE Y YOUTUBE PARA LAS 11 MATERIAS (CECYT 11)
+ * ENLACES DE GOOGLE DRIVE Y YOUTUBE PARA LAS 11 MATERIAS
  * =========================================================================
  * 
  * Aquí se configuran las URLs de las carpetas de Google Drive y las listas
@@ -52,7 +52,7 @@ export const OFFICIAL_DRIVE_LINKS: Record<string, string> = {
   'quimica-1': 'https://drive.google.com/drive/folders/1Zsmz2n-6CYpWETssuH2aduiin9rExfIk?usp=drive_link',
 
   // 11. Dibujo Técnico I
-  'dibujo-tecnico-1': 'https://drive.google.com/drive/folders/1-SOL-DIBUJO-TECNICO1-CECYT11-OFICIAL',
+  'dibujo-tecnico-1': 'https://drive.google.com/drive/folders/1-SOL-DIBUJO-TECNICO1-OFICIAL',
 };
 
 /**
@@ -134,7 +134,7 @@ export function getSubjectDriveLinks(subjectId: string): SubjectDriveLinks {
   if (GHOST_DRIVE_LINKS[subjectId]) return GHOST_DRIVE_LINKS[subjectId];
   if (GHOST_DRIVE_LINKS[normalized]) return GHOST_DRIVE_LINKS[normalized];
 
-  const defaultUrl = `https://drive.google.com/drive/folders/1-SOL-${subjectId.toUpperCase()}-CECYT11-OFICIAL`;
+  const defaultUrl = `https://drive.google.com/drive/folders/1-SOL-${subjectId.toUpperCase()}-OFICIAL`;
   return {
     mainFolderUrl: defaultUrl,
     booksPdfFolderUrl: defaultUrl,
@@ -162,55 +162,55 @@ export function getDefaultDriveLinksMap(): Record<string, string> {
  * de reproducción de YouTube para cada materia.
  */
 export const GHOST_YOUTUBE_PLAYLISTS: Record<string, string> = {
-  // Comunicación Científica
-  'comunicacion-cientifica': 'https://www.youtube.com/playlist?list=PLComunicacionCientificaIPN',
-  comunicacion_cientifica: 'https://www.youtube.com/playlist?list=PLComunicacionCientificaIPN',
-
-  // Entorno Socioeconómico de México
-  'entorno-socioeconomico': 'https://www.youtube.com/playlist?list=PLEntornoSocioeconomicoMexico',
-  entorno_socioeconomico: 'https://www.youtube.com/playlist?list=PLEntornoSocioeconomicoMexico',
+  // Geometría Analítica
+  'geometria-analitica': 'https://www.youtube.com/playlist?list=PLUf2zrcpinYk',
+  geometria_analitica: 'https://www.youtube.com/playlist?list=PLUf2zrcpinYk',
 
   // Física I
-  'fisica-1': 'https://www.youtube.com/playlist?list=PLFisica1MassieuIPN',
-  fisica_1: 'https://www.youtube.com/playlist?list=PLFisica1MassieuIPN',
-
-  // Geometría Analítica
-  'geometria-analitica': 'https://www.youtube.com/playlist?list=PLGeometriaAnaliticaIPN',
-  geometria_analitica: 'https://www.youtube.com/playlist?list=PLGeometriaAnaliticaIPN',
-
-  // Inglés III
-  'ingles-3': 'https://www.youtube.com/playlist?list=PLIngles3TecnicoIPN',
-  ingles_3: 'https://www.youtube.com/playlist?list=PLIngles3TecnicoIPN',
-
-  // Legislación en la Construcción
-  'normas-tramitaciones': 'https://www.youtube.com/playlist?list=PLNormasTramitacionesCDMX',
-  'legislacion-construccion': 'https://www.youtube.com/playlist?list=PLNormasTramitacionesCDMX',
-  normas_tramitaciones: 'https://www.youtube.com/playlist?list=PLNormasTramitacionesCDMX',
-
-  // Materiales Sustentables
-  'materiales-sustentables': 'https://www.youtube.com/playlist?list=PLSustentabilidadConstruccion',
-  materiales_sustentables: 'https://www.youtube.com/playlist?list=PLSustentabilidadConstruccion',
-
-  // Obra Negra
-  'obra-negra': 'https://www.youtube.com/playlist?list=PLObraNegraConstruccion',
-  obra_negra: 'https://www.youtube.com/playlist?list=PLObraNegraConstruccion',
-
-  // Planimetría Aplicada
-  'planimetria-aplicada': 'https://www.youtube.com/playlist?list=PLPlanimetriaTopografia',
-  planimetria_aplicada: 'https://www.youtube.com/playlist?list=PLPlanimetriaTopografia',
+  'fisica-1': 'https://www.youtube.com/playlist?list=PLTo_9e4cEXlE',
+  fisica_1: 'https://www.youtube.com/playlist?list=PLTo_9e4cEXlE',
 
   // Química I
-  'quimica-1': 'https://www.youtube.com/playlist?list=PLQuimicaInorganicaIPN',
-  quimica_1: 'https://www.youtube.com/playlist?list=PLQuimicaInorganicaIPN',
+  'quimica-1': 'https://www.youtube.com/playlist?list=PLUe-i2lPaovQ',
+  quimica_1: 'https://www.youtube.com/playlist?list=PLUe-i2lPaovQ',
 
   // Dibujo Técnico I
-  'dibujo-tecnico-1': 'https://www.youtube.com/playlist?list=PLDibujoTecnicoMassieu',
-  dibujo_tecnico_1: 'https://www.youtube.com/playlist?list=PLDibujoTecnicoMassieu',
+  'dibujo-tecnico-1': 'https://www.youtube.com/playlist?list=PLNtmgjqlJ3hY',
+  dibujo_tecnico_1: 'https://www.youtube.com/playlist?list=PLNtmgjqlJ3hY',
+
+  // Obra Negra
+  'obra-negra': 'https://www.youtube.com/playlist?list=PLfk5_QHrlhCg',
+  obra_negra: 'https://www.youtube.com/playlist?list=PLfk5_QHrlhCg',
+
+  // Legislación en la Construcción / Normas y Tramitaciones
+  'normas-tramitaciones': 'https://www.youtube.com/playlist?list=PLNm5D-V1RTEU',
+  'legislacion-construccion': 'https://www.youtube.com/playlist?list=PLNm5D-V1RTEU',
+  normas_tramitaciones: 'https://www.youtube.com/playlist?list=PLNm5D-V1RTEU',
+
+  // Planimetría Aplicada
+  'planimetria-aplicada': 'https://www.youtube.com/playlist?list=PLZDpkkVM3ygXHWFgjQKM4HGF4d29dbafj',
+  planimetria_aplicada: 'https://www.youtube.com/playlist?list=PLZDpkkVM3ygXHWFgjQKM4HGF4d29dbafj',
+
+  // Materiales y Tecnologías Sustentables
+  'materiales-sustentables': 'https://www.youtube.com/playlist?list=PLMUslBMpa-Og',
+  materiales_sustentables: 'https://www.youtube.com/playlist?list=PLMUslBMpa-Og',
+
+  // Entorno Socioeconómico de México
+  'entorno-socioeconomico': 'https://www.youtube.com/playlist?list=PLKRH1FKo1sz8',
+  entorno_socioeconomico: 'https://www.youtube.com/playlist?list=PLKRH1FKo1sz8',
+
+  // Comunicación Científica
+  'comunicacion-cientifica': 'https://www.youtube.com/playlist?list=PLJDmxGB2xEaw',
+  comunicacion_cientifica: 'https://www.youtube.com/playlist?list=PLJDmxGB2xEaw',
+
+  // Inglés III
+  'ingles-3': 'https://www.youtube.com/playlist?list=PLNLDdYgdU2iI',
+  ingles_3: 'https://www.youtube.com/playlist?list=PLNLDdYgdU2iI',
 };
 
 export function getSubjectYoutubePlaylist(subjectId: string): string {
   const normalized = subjectId.replace(/_/g, '-');
   return GHOST_YOUTUBE_PLAYLISTS[subjectId] || 
          GHOST_YOUTUBE_PLAYLISTS[normalized] || 
-         `https://www.youtube.com/results?search_query=cecyt+11+${encodeURIComponent(subjectId)}`;
+         `https://www.youtube.com/results?search_query=tecnico+en+construccion+${encodeURIComponent(subjectId)}`;
 }

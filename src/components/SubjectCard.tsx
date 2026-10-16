@@ -10,9 +10,11 @@ import {
   Layers, 
   GraduationCap, 
   ArrowRight,
-  FolderOpen
+  FolderOpen,
+  Youtube
 } from 'lucide-react';
 import { Subject } from '../types';
+import { getSubjectYoutubePlaylist } from '../data/driveLinksData';
 
 interface SubjectCardProps {
   subject: Subject;
@@ -20,6 +22,7 @@ interface SubjectCardProps {
   completedTopicsCount: number;
   totalTopicsCount: number;
   driveLink?: string;
+  youtubePlaylistUrl?: string;
 }
 
 export const SubjectCard: React.FC<SubjectCardProps> = ({
@@ -27,6 +30,7 @@ export const SubjectCard: React.FC<SubjectCardProps> = ({
   onSelect,
   completedTopicsCount,
   totalTopicsCount,
+  youtubePlaylistUrl,
 }) => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
@@ -45,6 +49,7 @@ export const SubjectCard: React.FC<SubjectCardProps> = ({
     : 0;
 
   const isTechnical = subject.area === 'tecnologica';
+  const playlistUrl = youtubePlaylistUrl || subject.youtubePlaylistUrl || getSubjectYoutubePlaylist(subject.id);
 
   return (
     <div className="bg-[#060a18]/85 rounded-3xl border border-cyan-950/80 hover:border-cyan-500/40 shadow-xl shadow-black/80 hover:shadow-cyan-500/10 transition-all duration-300 flex flex-col justify-between overflow-hidden group hover:-translate-y-1 relative backdrop-blur-xl">
@@ -57,11 +62,23 @@ export const SubjectCard: React.FC<SubjectCardProps> = ({
           >
             {getIcon(subject.icon)}
           </div>
-          <div className="flex flex-col items-end">
-            <span className="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-md bg-[#030614] text-cyan-300 border border-indigo-950">
-              {subject.code}
-            </span>
-            <span className={`text-[10px] mt-1 font-bold px-2 py-0.5 rounded-full ${
+          <div className="flex flex-col items-end gap-1">
+            <div className="flex items-center gap-1.5">
+              <span className="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-md bg-[#030614] text-cyan-300 border border-indigo-950">
+                {subject.code}
+              </span>
+              <a
+                href={playlistUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="w-6 h-6 rounded-md bg-[#0a0512] hover:bg-rose-600 text-rose-400 hover:text-white border border-rose-500/30 flex items-center justify-center transition cursor-pointer shadow-xs group/yt"
+                title={`Ver lista de YouTube de ${subject.name}`}
+              >
+                <Youtube className="w-3.5 h-3.5 group-hover/yt:scale-110 transition-transform" />
+              </a>
+            </div>
+            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
               isTechnical 
                 ? 'bg-amber-950/50 text-amber-300 border border-amber-500/30' 
                 : 'bg-cyan-950/50 text-cyan-300 border border-cyan-500/30'
